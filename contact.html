@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contacct.css">
+    <script>
+        function validateForm(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form inputs
+            const firstName = document.getElementById("ijowk-7").value.trim();
+            const lastName = document.getElementById("indfi-5").value.trim();
+            const email = document.getElementById("ipmgh-7").value.trim();
+            const phone = document.getElementById("imgis-6").value.trim();
+            const message = document.getElementById("i5vyy-7").value.trim();
+
+            // Regular expressions for validation
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const phoneRegex = /^[0-9]{10}$/;
+
+            // Clear previous error messages
+            const errorMessages = document.querySelectorAll(".error-message");
+            errorMessages.forEach(msg => msg.remove());
+
+            let isValid = true;
+
+            // Validate first name
+            if (firstName === "") {
+                showError("ijowk-7", "First name is required");
+                isValid = false;
+            }
+
+            // Validate last name
+            if (lastName === "") {
+                showError("indfi-5", "Last name is required");
+                isValid = false;
+            }
+
+            // Validate email
+            if (!emailRegex.test(email)) {
+                showError("ipmgh-7", "Enter a valid email address");
+                isValid = false;
+            }
+
+            // Validate phone number
+            if (!phoneRegex.test(phone)) {
+                showError("imgis-6", "Enter a valid 10-digit phone number");
+                isValid = false;
+            }
+
+            // Validate message
+            if (message === "") {
+                showError("i5vyy-7", "Message cannot be empty");
+                isValid = false;
+            }
+
+            // Submit form if valid
+            if (isValid) {
+                alert("Form submitted successfully!");
+                document.querySelector("form").submit();
+            }
+        }
+
+        // Function to show error messages
+        function showError(inputId, message) {
+            const inputField = document.getElementById(inputId);
+            const errorMessage = document.createElement("div");
+            errorMessage.className = "error-message";
+            errorMessage.style.color = "red";
+            errorMessage.textContent = message;
+            inputField.parentElement.appendChild(errorMessage);
+        }
+    </script>
+</head>
+<body style="background-color: black;">
+    <div class="landing_page">
+        <div class="responsive-container-block big-container">
+            <img class="bg-img" id="iq5bf" src="download.jpeg">
+            <div class="responsive-container-block container">
+                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12 left-one">
+                    <div class="content-box">
+                        <p class="text-blk section-head">Choose Identity</p>
+                        <p class="text-blk section-subhead">
+                            A hairstyle is the way hair is cut and styled, and can be a reflection of a person's identity, values, and creativity. Hairstyles can signal cultural, social, and ethnic identity.
+                        </p>
+                        <div class="icons-container">
+                            <a class="share-icon" href="#">
+                                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-twitter.png">
+                            </a>
+                            <a class="share-icon" href="#">
+                                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-facebook.png">
+                            </a>
+                            <a class="share-icon" href="#">
+                                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-google.png">
+                            </a>
+                            <a class="share-icon" href="#">
+                                <img class="img" src="https://workik-widget-assets.s3.amazonaws.com/Footer1-83/v1/images/Icon-instagram.png">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="responsive-cell-block wk-ipadp-6 wk-tab-12 wk-mobile-12 wk-desk-6 right-one" id="i1zj">
+                    <form class="form-box" onsubmit="validateForm(event)">
+                        <div class="container-block form-wrapper">
+                            <p class="text-blk contactus-head">Get in Touch</p>
+                            <p class="text-blk contactus-subhead">We will get back to you in 24 hours</p>
+                            <div class="responsive-container-block">
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i10mt-7">
+                                    <input class="input" id="ijowk-7" name="FirstName" placeholder="First Name">
+                                </div>
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i1ro7">
+                                    <input class="input" id="indfi-5" name="LastName" placeholder="Last Name">
+                                </div>
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-6 wk-ipadp-6 emial" id="ityct">
+                                    <input class="input" id="ipmgh-7" name="Email" placeholder="Email">
+                                </div>
+                                <div class="responsive-cell-block wk-desk-6 wk-ipadp-6 wk-tab-12 wk-mobile-12">
+                                    <input class="input" id="imgis-6" name="PhoneNumber" placeholder="Phone Number">
+                                </div>
+                                <div class="responsive-cell-block wk-tab-12 wk-mobile-12 wk-desk-12 wk-ipadp-12" id="i634i-7">
+                                    <textarea class="textinput" id="i5vyy-7" name="Message" placeholder="Type message here"></textarea>
+                                </div>
+                            </div>
+                            <button class="submit-btn">Get in Touch</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="footer-container">
+        <p>&copy; 2024 MyWebsite. All rights reserved.</p>
+        <div class="social-links">
+          <a href="index1.html">Home <i class='bx bxs-home-alt-2' ></i></a>
+          <a href="#">Twitter <i class='bx bxl-twitter' ></i></a>
+          <a href="#">Instagram <i class='bx bxl-instagram-alt' ></i></a>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+nav {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .navbar-brand img {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #6dcd9a;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2em;
+  margin: 100px auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.card {
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.card h5 {
+  font-size: 1.5em;
+  margin: 15px;
+  color: #6dcd9a;
+}
+
+.card p {
+  font-size: 1em;
+  margin: 0 15px 15px;
+  color: #ccc;
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+footer .social {
+  margin: 15px 0;
+}
+
+footer .social a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+footer .social a:hover {
+  color: #6dcd9a;
+}

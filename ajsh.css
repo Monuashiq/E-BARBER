@@ -1,0 +1,68 @@
+body {
+    font-family: sans-serif;
+    background-image: linear-gradient(rgba(0,0,0,0.0),rgba(0,0,0,0.5)),url(hommmm.jpg);
+    background-repeat: no-repeat; 
+    background-attachment: fixed;
+    background-size: cover;
+  
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: auto;
+}
+
+.content {
+    padding: 20px;
+    background-color: #160808;
+    border-radius: 5px;
+    box-shadow: 19px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.content h2{
+    color: white;
+}
+
+
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+   
+}
+
+.rating span {
+    margin-right: 5px;
+}
+.rating span,p{
+    color: white;
+}
+.actions {
+    display: flex;
+    justify-content: space-between;
+}
+
+.actions button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 5px 2px 20px #e4d9d9d0;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: ease-in 0.6s;
+}
+.actions button:hover{
+    background-color: #2433ff;
+}
